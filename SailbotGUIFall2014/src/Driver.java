@@ -10,7 +10,7 @@ public class Driver
         JFrame frame = new JFrame("Virginia Tech Sailbot");
         frame.setSize(1000 , 700);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        GUI a = new GUI();
+        GUIPanel a = new GUIPanel();
         frame.setContentPane(a);
         frame.setVisible(true);
         // a.runSim();
