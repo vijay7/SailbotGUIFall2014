@@ -17,12 +17,16 @@ public class GUIPanel
     extends JPanel
 {
     BufferedImage title;
+    BufferedImage boatSpeed;
+    BufferedImage wind;
     public GUIPanel() throws IOException
     {
         setLayout(new BorderLayout());
         setBackground(new Color(102, 0, 0));
-        GUIPanel2 a=new GUIPanel2();
+        Title a=new Title();
         title=a.getBufferedImage();
+        BoatWindModule windModule=new BoatWindModule();
+        wind=windModule.getBufferedImage();
 
     }
 
@@ -30,6 +34,7 @@ public class GUIPanel
     {
         super.paintComponent(g);
 
-        g.drawImage(title, 200, 0, 600, 90, null);
+        g.drawImage(title, 0, 0, 1000, 100, null);
+        g.drawImage(wind, 250, 100, 250, 250, null);
     }
 }

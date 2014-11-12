@@ -15,15 +15,17 @@ import javax.swing.JPanel;
  * @author Vijay
  * @version Nov 5, 2014
  */
-public class GUIPanel2
+public class Title
 {
     BufferedImage title;
+    BufferedImage logo;
     Graphics2D g;
 
-    public GUIPanel2() throws IOException
+    public Title() throws IOException
     {
-
-        title=ImageIO.read(new File("VTSailBOT+Logo.png"));
+        title=new BufferedImage(1000,100, BufferedImage.TYPE_4BYTE_ABGR);
+        logo=title.getSubimage(270, 0, 460, 100);
+        logo=ImageIO.read(new File("VTSailBOT+Logo.png"));
         g=(Graphics2D)title.getGraphics();
         drawOn();
     }
@@ -36,7 +38,10 @@ public class GUIPanel2
     private void drawOn()
     {
         g.setColor(Color.BLUE);
-        g.fillRect(30, 10, 500, 15);
+        g.fillRect(0, 0, 270, 100);
+        g.setColor(Color.GREEN);
+        g.fillRect(730, 0, 270, 100);
+        g.drawImage(logo, 270, 0, 460, 100, null);
     }
 
 }
