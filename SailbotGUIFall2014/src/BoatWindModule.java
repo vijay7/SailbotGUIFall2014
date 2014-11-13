@@ -45,6 +45,7 @@ public class BoatWindModule
         //GENERALIZE THE NUMBERS USING VARIABLES LATER
         g.setColor(Color.RED);
         int red = 4;
+        String name = "this better work";
         g.fillRect(0, 0, 250, 250);
     }
     
